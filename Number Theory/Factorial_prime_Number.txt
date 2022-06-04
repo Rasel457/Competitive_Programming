@@ -1,0 +1,71 @@
+                                        ## Factorial
+#include<bits/stdc++.h>
+using namespace std;
+#define ll long long int
+#define ld long double
+
+
+
+ll Factorial(ll n ) {
+    if( n<=1 )
+    {
+        return 1;
+    }
+    else
+    {
+        return n*Factorial(n-1);
+    }
+
+
+}
+
+
+int main()
+{
+    int n;
+    cin>>n;
+    int res=Factorial(n);
+    cout<<res<<endl;
+}
+
+
+                                         How many digits in a factorial
+#include <bits/stdc++.h>
+using namespace std;
+#define ll long long
+
+ll FactorialDigits( ll num)
+{
+    double res=0;
+    for(int i=1;i<=num;i++)
+    {
+        res+=log10(i);
+    }
+    return (floor(res)+1);
+}
+
+int main()
+{
+    int n;
+    cin>>n;
+    cout<<(FactorialDigits(n));
+
+}
+----------------------------------------------------------------------------
+      how many time a prime number has occure in n!
+#include <bits/stdc++.h>
+using namespace std;
+
+int main()
+{
+    int n,p;
+    cin>>n>>p;
+    int a=0;
+    int z=p;
+    while((n/z)>0)
+    {
+        a+=(n/z);
+        z=z*p;
+    }
+    cout<<a<<endl;
+}
