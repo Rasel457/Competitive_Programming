@@ -8,7 +8,7 @@ int mex_cal( unordered_set<int>s)
     {
         mex++;
     }
-        return mex;
+     return mex;
 }
 
 int main()

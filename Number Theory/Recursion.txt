@@ -132,7 +132,7 @@ int main()
 }
 
 ----------------------------------------------------------------------------------------  
-                    ##print natural number increasinr and decresing order
+                    ##print natural number increasing and decresing order
 #include<bits/stdc++.h>
 using namespace std;
 #define LL long long int

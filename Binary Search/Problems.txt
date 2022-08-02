@@ -5,3 +5,5 @@
 5. https://www.hackerearth.com/practice/algorithms/searching/binary-search/practice-problems/algorithm/monks-encounter-with-polynomial/description/
 6. https://www.spoj.com/problems/BBIN/
 7. https://codeforces.com/contest/96/problem/B
+8. https://lightoj.com/problem/trailing-zeroes-iii
+9. https://www.spoj.com/problems/RPLC/
