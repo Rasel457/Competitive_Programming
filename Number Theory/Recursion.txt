@@ -1,4 +1,4 @@
-                    ## Total sum for 1 to n using Recursion
+                                   ## Total sum for 1 to n using Recursion
 
 #include<bits/stdc++.h>
 using namespace std;

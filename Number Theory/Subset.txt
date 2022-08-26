@@ -19,7 +19,7 @@ void GenetareSubset(int pos,int subset[5],int subsetedukaisi)
     }
     //nibo Na
     GenetareSubset(pos+1,subset,subsetedukaisi);
-   //nibo
+    //nibo
     subset[subsetedukaisi]=arr[pos];
     subsetedukaisi++;
     GenetareSubset(pos+1,subset,subsetedukaisi);

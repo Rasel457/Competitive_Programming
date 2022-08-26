@@ -18,3 +18,58 @@ long long powerMod(long long number, long long power, long long mod)
         return ret % mod;
     }
 }
+-------------------------------------------------------------------------------------
+
+#include<bits/stdc++.h>
+using namespace std;
+#define ll long long int
+#define ld long double
+#define endl '\n'
+
+//ll gcd(ll a, ll b) {return __gcd(a,b);}
+//ll lcm(ll a, ll b) {return a*(b/gcd(a,b));}
+
+const int N = 1e5+123;
+const int MOD = 1e9+7;
+
+int arr[N];
+int brr[N];
+
+
+ll modPow(ll b,ll p)
+{
+    ll res=1;
+    while(p>0)//p=6
+    {
+        if(p%2==1)//p=6,p=3 b=3^4
+        {
+            res*=b;
+            res%=MOD;
+        }
+        p/=2; //p=3,p=1
+
+        b*=b;//b=b^2,b^4
+        b%=MOD;
+    }
+    return res;
+}
+
+
+
+int main()
+{
+    ios_base::sync_with_stdio(false);
+    cin.tie(NULL);
+    cout.tie(NULL);
+
+    int p;
+    cin>>p;
+    ll ans=modPow(2,p);//p=6
+    cout<<ans<<endl;
+
+
+    return 0;
+}
+
+// https://cses.fi/problemset/task/1617#:~:text=CSES%20%2D%20Bit%20Strings&text=Your%20task%20is%20to%20calculate,101%2C%20110%2C%20and%20111.&text=The%20only%20input%20line%20has%20an%20integer%20n.
+// https://vjudge.net/problem/UVA-374

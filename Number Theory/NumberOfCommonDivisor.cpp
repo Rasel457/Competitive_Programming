@@ -1,29 +1,3 @@
-#include <bits/stdc++.h>
-using namespace std;
-typedef long long int LL;
-
-int NOD[10000005];
-
-void NumberOfDivisors(LL n)
-{
-    for(int i=1; i<=n;i++)
-    {
-        for(int j=i ;j<=n ;j+=i)
-            NOD[j]++;
-    }
-}
-
-int main()
-{
-    LL n;
-    cin>>n;
-    NumberOfDivisors(n);
-    cout<<NOD[100]<<endl;
-}
-
-https://atcoder.jp/contests/abc172/tasks/abc172_d
-------------------------------------------------------------------------------------------------------
-
 #include<bits/stdc++.h>
 using namespace std;
 #define ll long long int
@@ -39,8 +13,7 @@ const int MOD = 1e9+7;
 bool isPrime[N];
 vector<int>prime;
 
-
-void genPrime(int n)
+void PrimeGen(ll n)
 {
     isPrime[2]=1;
     for(int i=3;i<=n;i+=2)
@@ -51,25 +24,23 @@ void genPrime(int n)
     {
         if(isPrime[i]==1)
         {
-            for(int j=i*i;j<=n;j+=(2*i))     //Complexity O(n)
+            for(int j=i*i;j<=n;j+=(2*i))
             {
                 isPrime[j]=0;
             }
         }
-
     }
     prime.push_back(2);
     for(int i=3;i<=n;i+=2)
     {
         if(isPrime[i]==1)
         {
-             prime.push_back(i);
+            prime.push_back(i);
         }
     }
-
 }
 
-int NOD(ll n)
+ll NOD(ll n)
 {
     int res=1;
     for(auto p:prime)
@@ -101,22 +72,21 @@ int main()
     cout.tie(NULL);
 
     int lim=1e6;
-    genPrime(lim);
+    PrimeGen(lim);
 
     int t;
     cin>>t;
     while(t--)
     {
-        int n;
-        cin>>n;
-        cout<<NOD(n)<<endl;
+        int a,b;
+        cin>>a>>b;
+        int GCD=gcd(a,b);
+        int ans=NOD(GCD);
+        cout<<ans<<endl;
     }
+
+    return 0;
+
 }
-
-// https://www.hackerearth.com/problem/algorithm/number-of-divisors-5/
-// https://www.hackerearth.com/problem/algorithm/number-of-divisors-14/
-// https://lightoj.com/problem/false-ordering
-
-              
-
+// https://www.spoj.com/problems/COMDIV/
 

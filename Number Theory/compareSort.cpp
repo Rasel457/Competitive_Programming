@@ -45,4 +45,10 @@ int main()
 25 6
 7 9
 8 5
+https://vjudge.net/contest/487692#problem/H
+https://vjudge.net/contest/499601#problem/Q
+https://lightoj.com/problem/false-ordering
 */
+
+
+

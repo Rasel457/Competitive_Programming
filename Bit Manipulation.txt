@@ -1,4 +1,17 @@
-                                            Left Shift and Right Shift
+void printBinary(int num)
+{
+      for(int i=10;i>=0;--i)
+      {
+	cout<<((num>>i)&1);
+      }
+      cout<<endl;
+}
+
+
+
+
+
+                                           Left Shift and Right Shift
 
 #include<bits/stdc++.h>
 using namespace std;
@@ -56,10 +69,10 @@ int main()
                          Counting number of set bits
 #include<bits/stdc++.h>
 using namespace std;
-#define ll long long int
-#define ld long double
-#define endl '\n'
-
+#define ll long long int                        ith bit set: (a|(1<<i))
+#define ld long double                          ith bit unset: (a&(~(1<<i)))
+#define endl '\n'                               ith bit toggle: (a^(1<<i))
+                                                
 
 int main()
 {
@@ -290,6 +303,11 @@ int main()
     }
 
 }
+
+//https://www.spoj.com/problems/BITDIFF/
+
+Reference:
+Sum of Bitwise And of all pairs in a given array
 
 
 

@@ -58,9 +58,10 @@ void bfs(int source, int destination)
         }
         reverse(path.begin(),path.end());
 
-        for(int i=0;i<path.size();i++)
+        cout<<path[0];
+        for(int i=1;i<path.size();i++)
         {
-            cout<<path[i]<<"-> ";
+            cout<<" -> "<<path[i];
         }
         path.clear();
         cout<<endl;

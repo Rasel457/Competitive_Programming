@@ -52,7 +52,7 @@ int main()
 
 }
 ----------------------------------------------------------------------------
-      how many time a prime number has occure in n!
+                   how many time a prime number has occure in n!
 #include <bits/stdc++.h>
 using namespace std;
 
@@ -69,3 +69,36 @@ int main()
     }
     cout<<a<<endl;
 }
+------------------------------------------------------------------------------------
+                     Trailing Zeros
+
+
+#include<bits/stdc++.h>
+using namespace std;
+#define ll long long int
+#define ld long double
+#define endl '\n'
+
+const int N = 2e5+5;
+const int MOD = 1e9+7;
+
+int arr[N];
+
+
+int main()
+{
+    ios_base::sync_with_stdio(false);
+    cin.tie(NULL);
+    cout.tie(NULL);
+
+    int n;
+    cin>>n;
+    int cnt=0;
+    while(n/5>0)
+    {
+        n/=5;
+        cnt+=n;
+    }
+    cout<<cnt<<endl;
+}
+

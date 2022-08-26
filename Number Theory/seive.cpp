@@ -7,7 +7,7 @@ int main()
 {
 
     LL n;
-    cout<<"Enter any number : ";
+    cout<<"Enter any number : "; //n maximum 10e6 
     cin>>n;
     LL prime[n+1];
     prime[0]=0;
