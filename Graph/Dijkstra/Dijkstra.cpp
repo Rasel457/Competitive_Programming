@@ -62,7 +62,7 @@ void dijkstra(int s)//1
             continue;
         }
 
-        for(Edge e: adj[u.node])//{3,1},{3,1},{5,2},{3,5}
+        for(Edge e: adj[u.node])//1,3,2,4,5
         {
             if(dist[e.v]>u.cost+e.w)
             {

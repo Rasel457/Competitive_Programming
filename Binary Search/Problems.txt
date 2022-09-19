@@ -7,3 +7,7 @@
 7. https://codeforces.com/contest/96/problem/B
 8. https://lightoj.com/problem/trailing-zeroes-iii
 9. https://www.spoj.com/problems/RPLC/
+10. https://www.codechef.com/problems/TRICOIN
+11. https://codeforces.com/contest/706/problem/B
+12. https://www.spoj.com/problems/MATHLOVE/
+13. https://codeforces.com/contest/474/problem/B

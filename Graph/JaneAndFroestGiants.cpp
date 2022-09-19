@@ -185,3 +185,4 @@ int main()
 }
 
 //https://lightoj.com/problem/jane-and-the-frost-giants
+// https://vjudge.net/contest/512497#problem/Q

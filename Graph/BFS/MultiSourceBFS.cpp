@@ -107,3 +107,6 @@ int main()
 1 7 10
 Tanvir sajol
 */
+
+//https://lightoj.com/problem/jane-and-the-frost-giants
+// https://vjudge.net/contest/512497#problem/Q

@@ -1,0 +1,5 @@
+1. https://codeforces.com/problemset/problem/1042/D
+2. https://acm.timus.ru/problem.aspx?space=1&num=1521
+3. https://vjudge.net/contest/512497#problem/H
+4. https://cses.fi/problemset/result/4570343/
+5. https://cses.fi/problemset/result/4570325/

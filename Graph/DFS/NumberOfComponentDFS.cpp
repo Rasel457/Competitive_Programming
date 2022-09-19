@@ -21,9 +21,7 @@ void dfs(int u)
 
     for(auto v:adj[u])
     {
-
         dfs(v);
-
     }
 
 }

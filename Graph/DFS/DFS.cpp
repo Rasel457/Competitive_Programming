@@ -18,7 +18,7 @@ void dfs(int u)
 
     for(auto v:adj[u])
     {
-        if(visited[u]==0)
+        if(visited[v]==0)
         {
             dfs(v);
         }

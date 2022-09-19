@@ -303,6 +303,68 @@ int main()
     }
 
 }
+-------------------------------------------------------------------------------
+       Find the sum of bit differences in all the pairs
+#include<bits/stdc++.h>
+using namespace std;
+#define ll long long int
+#define ld long double
+#define endl '\n'
+ 
+const int N = 2e5+125;
+const int MOD = 10000007;
+int arr[N];
+ 
+int main()
+{
+    ios_base::sync_with_stdio(false);
+    cin.tie(NULL);
+    cout.tie(NULL);
+ 
+ 
+    int t,cas=0;
+    cin>>t;
+    while(t--)
+    {
+        ios_base::sync_with_stdio(false);
+        cin.tie(NULL);
+        cout.tie(NULL);
+ 
+        cas++;
+        int n;
+        cin>>n;
+        for(int i=0;i<n;i++)
+        {
+            cin>>arr[i];
+        }
+        ll res=0,ans=0,res1=0;
+        for(int i=0;i<=31;i++)
+        {
+            ll cnt1=0,cnt0=0;
+            for(int j=0;j<n;j++)
+            {
+                if(arr[j]&(1<<i))
+                {
+                    cnt1++;
+                }
+                else
+                {
+                    cnt0++;
+                }
+            }
+            res=cnt1*cnt0;
+            ans+=(res%MOD);
+ 
+        }
+         res1=(ans*2)%MOD;
+ 
+        cout<<"Case "<<cas<<": "<<res1<<endl;
+ 
+    }
+ 
+    return 0;
+}
+ 
 
 //https://www.spoj.com/problems/BITDIFF/
 
