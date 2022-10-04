@@ -41,7 +41,7 @@ ll modPow(ll b,ll p)
     ll res=1;
     while(p>0)//p=6
     {
-        if(p%2==1)//p=6,p=3 b=3^4
+        if(p%2==1)//p=6,p=3,p=1
         {
             res*=b;
             res%=MOD;
