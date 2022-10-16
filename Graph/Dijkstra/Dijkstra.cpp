@@ -3,29 +3,41 @@ using namespace std;
 #define ll long long int
 #define ld long double
 #define endl '\n'
+#define vi vector<int>
+#define vl vector<ll>
+#define pii pair<int,int>
+#define pll pair<ll, ll>
+#define vii vector<pii>
+#define vll vector<pll>
+#define ff first
+#define ss second
+#define pb push_back
+#define mem(a, b) memset(a, b, sizeof(a))
 
-const int N = 1e3+5;
+const int N = 1e5+5;
 const int MOD = 1e9+7;
-const int maxn = 205;
-const int INF=1000000000;
+const int maxn = 105;
+const int inf = 2000000000;
+const ll infLL = 9000000000000000000;
 
+//U,D,L,R
+char dir[4]={'U','D','L','R'};
 int dx[]={-1, 1, 0, 0, -1, -1, 1, 1};
 int dy[]={0, 0, -1, 1, -1, 1, -1, 1};
 
 int kx[]={1, 1, 2, 2, -1, -1, -2, -2};
 int ky[]={2, -2, 1, -1, 2, -2, 1, -1};
 
-int n,e;
-struct Edge
-{
-    int v;
-    int w;
+struct Edge{
+    ll v;
+    ll w;
 };
 
 struct Node
 {
-    int node,cost;
-    Node(int _node, int _cost)
+    ll node,cost;
+
+    Node(ll _node,ll _cost)
     {
         node=_node;
         cost=_cost;
@@ -39,14 +51,16 @@ bool operator<(Node A,Node B)
 
 vector<Edge>adj[N];
 priority_queue<Node>PQ;
-int dist[N];
+ll dist[N];
+
+ll n,m;
 
 
-void dijkstra(int s)//1
+void dijkstra(ll s)//1
 {
-    for(int i=1;i<=n;i++)
+    for(ll i=1;i<=n;i++)
     {
-        dist[i]=INF;
+        dist[i]=infLL;
     }
 
     dist[s]=0;//dist[1]=0
@@ -82,9 +96,9 @@ int main()
     cout.tie(NULL);
 
 
-    cin>>n>>e;
-    int u,v,w;
-    for(int i=1;i<=e;i++)
+    cin>>n>>m;
+    ll u,v,w;
+    for(ll i=1;i<=m;i++)
     {
         cin>>u>>v>>w;
         adj[u].push_back({v,w});
@@ -93,10 +107,10 @@ int main()
     cin>>source;
 
     dijkstra(source);
-    for(int i=1;i<=n;i++)
+    for(ll i=1;i<=n;i++)
     {
         cout<<"Node "<<i<<" Distance: ";
-        if(dist[i]==INF)
+        if(dist[i]==infLL)
         {
             cout<<"NOT VISITED"<<endl;
         }

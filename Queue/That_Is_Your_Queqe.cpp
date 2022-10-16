@@ -10,7 +10,7 @@ using namespace std;
 #define pb push_back
 #define PI 2.0 * acos(0.0)
 #define mem(a, b) memset(a, b, sizeof(a))
-#define forstl(i, s)  for (__typeof ((s).end ()) i = (s).begin (); i != (s).end (); ++i)// Delete Specific Element from deque
+#define forstl(i, s)  for (__typeof ((s).end ()) i = (s).begin (); i != (s).end (); ++i)// Delete Specific Element from dequeue
 
 #include<ext/pb_ds/assoc_container.hpp>
 #include<ext/pb_ds/tree_policy.hpp>

@@ -56,3 +56,5 @@ int main()
 }
 //https://vjudge.net/problem/UVA-673
 //https://www.hackerrank.com/challenges/balanced-brackets/problem
+//https://vjudge.net/contest/514792#problem/A
+//https://www.codechef.com/problems/RNT011
