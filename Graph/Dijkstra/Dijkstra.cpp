@@ -135,3 +135,4 @@ int main()
 
 // https://vjudge.net/problem/UVA-1112
 // https://www.spoj.com/problems/EZDIJKST/
+// https://cses.fi/problemset/task/1671/
