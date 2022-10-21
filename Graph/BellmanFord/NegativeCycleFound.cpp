@@ -33,7 +33,7 @@ void bellman_ford(int s)
     {
         dist[i]=INF;
     }
-    
+
     dist[s]=0;
 
     for(int i=1;i<n;i++)
@@ -80,21 +80,8 @@ int main()
     cin>>source;
 
     bellman_ford(source);
-    for(int i=1;i<=n;i++)
-    {
-        cout<<"Node "<<i<<" Distance: ";
-        if(dist[i]==INF)
-        {
-            cout<<"NOT VISITED"<<endl;
-        }
-        else
-        {
-            cout<<dist[i]<<endl;
-            
 
-        }
-    }
-    
+
 
     if(flag==1)
     {
@@ -102,7 +89,20 @@ int main()
     }
     else
     {
-         cout<<"Negative Cycle Not Found"<<endl;
+        for(int i=1;i<=n;i++)
+        {
+            cout<<"Node "<<i<<" Distance: ";
+            if(dist[i]==INF)
+            {
+                cout<<"NOT VISITED"<<endl;
+            }
+            else
+            {
+                cout<<dist[i]<<endl;
+
+
+            }
+        }
     }
 
 

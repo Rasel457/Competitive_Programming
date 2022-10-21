@@ -136,3 +136,5 @@ int main()
 // https://vjudge.net/problem/UVA-1112
 // https://www.spoj.com/problems/EZDIJKST/
 // https://cses.fi/problemset/task/1671/
+// https://leetcode.com/problems/network-delay-time/
+// https://leetcode.com/problems/cheapest-flights-within-k-stops/
