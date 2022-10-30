@@ -11,3 +11,6 @@
 11. https://codeforces.com/contest/706/problem/B
 12. https://www.spoj.com/problems/MATHLOVE/
 13. https://codeforces.com/contest/474/problem/B
+14. https://leetcode.com/problems/binary-search/
+15. https://www.spoj.com/problems/SABBIRGAME/
+

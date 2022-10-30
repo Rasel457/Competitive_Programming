@@ -29,33 +29,28 @@ int flag=0;
 
 void bellman_ford(int s)
 {
-    for(int i=1;i<=n;i++)
+    for(int i=0;i<=n;i++)
     {
         dist[i]=INF;
     }
 
     dist[s]=0;
 
-    for(int i=1;i<n;i++)
+    for(int i=1;i<=n;i++)
     {
         for(Edge e:E)
         {
             if(dist[e.v]>dist[e.u]+e.w)
             {
                 dist[e.v]=dist[e.u]+e.w;
+                if(i==n)
+                {
+                    flag=1;
+                }
             }
         }
     }
-    for(int i=1;i<=1;i++)
-    {
-        for(Edge e:E)
-        {
-            if(dist[e.v]>dist[e.u]+e.w)
-            {
-                flag=1;
-            }
-        }
-    }
+
 }
 
 
@@ -131,7 +126,10 @@ int main()
 2 4 5
 1
 
+//https://vjudge.net/problem/UVA-558
 */
+
+
 
 
 
