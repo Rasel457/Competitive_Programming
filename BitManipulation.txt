@@ -1,0 +1,537 @@
+                                              Decimal to Binary
+void printBinary(int num)
+{
+      for(int i=10;i>=0;--i)
+      {
+	cout<<((num>>i)&1);
+      }
+      cout<<endl;
+}
+----------------------------------------------------------------------------------------------------------------------
+                                           Bit Operation 
+
+*AND Oparator: all 1 = 1
+               any 0 = 0
+
+*OR Oparetor : all 0 = 0
+               any 1 = 1
+
+*XOR Operator: Even 1 = 0
+               Odd  1 = 1  
+
+----------------------------------------------------------------------------------
+
+                            Left Shift and Right Shift
+
+#include<bits/stdc++.h>
+using namespace std;
+#define ll long long int
+#define ld long double
+#define endl '\n'
+
+
+int main()
+{
+    int q;
+    cin>>q;
+    while(q--)
+    {
+        int n,i;
+        cin>>n>>i;
+        //cout<<n<<" << "<<i<<" = "<<(n<<i)<<endl;//Left shift
+        cout<<n<<" >> "<<i<<" = "<<(n>>i)<<endl;//Right shift
+    }
+
+}
+----------------------------------------------------------------------------------------------
+                                  Checking for ith set bit
+#include<bits/stdc++.h>
+using namespace std;
+#define ll long long int
+#define ld long double
+#define endl '\n'
+
+
+int main()
+{
+    int q;
+    cin>>q;
+    while(q--)
+    {
+        int n,i;
+        cin>>n>>i;
+        int f=1;
+        f=f<<i;
+        int res=(n&f);
+
+        if(res==0)
+        {
+            cout<<i<<" th bit is not set"<<endl;
+        }
+        else
+        {
+             cout<<i<<" th bit is set"<<endl;
+        }
+    }
+
+}
+---------------------------------------------------------------------------------
+                         Counting number of set bits
+#include<bits/stdc++.h>
+using namespace std;
+#define ll long long int                        ith bit set: (a|(1<<i))
+#define ld long double                          ith bit unset: (a&(~(1<<i)))
+#define endl '\n'                               ith bit toggle: (a^(1<<i))
+                                               
+int main()
+{
+    int q;
+    cin>>q;
+    while(q--)
+    {
+        int n,cnt=0;
+        cin>>n;
+        while(n>0)
+        {
+            if((n&1)==1)            //log2(n)
+            {
+                cnt++;
+            }
+            n=n>>1;
+        }
+        cout<<cnt<<endl;
+    }
+
+}
+
+Another Approach:
+
+#include<bits/stdc++.h>
+using namespace std;
+#define ll long long int
+#define ld long double
+#define endl '\n'
+
+
+int main()
+{
+    int q;
+    cin>>q;
+    while(q--)
+    {
+        int n,cnt=0;
+        cin>>n;
+        while(n>0)
+        {
+            cnt++;
+            n=n&(n-1);
+        }
+        cout<<cnt<<endl;
+    }
+
+}
+----------------------------------------------------------------------------------
+** Set the ith bit of n
+
+#include <bits/stdc++.h>
+using namespace std;
+typedef long long ll;
+int main()
+{
+
+    int n,i;
+    cin>>n>>i;
+
+    int f=1;
+    f=f<<i;
+    int ans=n|f;
+    cout<<ans<<endl;
+    return 0;
+}
+-------------------------------------------------------------------------------- 
+** Clear the ith bit of n
+
+#include <bits/stdc++.h>
+using namespace std;
+typedef long long ll;
+int main()
+{
+
+    int n,i;
+    cin>>n>>i;
+
+    int f=1;
+    f=f<<i;
+    f=~f;
+    int ans=n&f;
+    cout<<ans<<endl;
+    return 0;
+}
+--------------------------------------------------------------------------------
+** Remove the last set bit
+#include <bits/stdc++.h>
+using namespace std;
+typedef long long ll;
+int main()
+{
+
+    int n,i;
+    cin>>n;
+    int ans=n&(n-1);
+    cout<<ans<<endl;
+    return 0;
+}
+--------------------------------------------------------------------------------
+** Check a Number is a Power of 2 ???
+#include <bits/stdc++.h>
+using namespace std;
+typedef long long ll;
+int main()
+{
+
+    int n;
+    cin>>n;
+    if((n&(n-1))==0)
+    {
+        cout<<"YES"<<endl;
+    }
+    else
+    {
+        cout<<"NO"<<endl;
+    }
+    return 0;
+}
+-------------------------------------------------------------------------------
+ 
+                              Pair Sum XOR of an array
+** Given an array with n elements, calculating following
+(a1+a1)^(a1+a2)^(a1+a3)^.....^(a1+an)^
+(a2+a1)^(a2+a2)^(a2+a3)^.....^(a2+an)^
+(a3+a1)^(a3+a2)^(a3+a3)^.....^(a3+an)^
+.....................................
+(an+a1)^(an+a2)^(an+a3)^.....^(an+an)^
+
+#include<bits/stdc++.h>
+using namespace std;
+#define ll long long int
+#define ld long double
+#define endl '\n'
+
+
+int main()
+{
+    int t;
+    cin>>t;
+    while(t--)
+    {
+        ios_base::sync_with_stdio(false);
+        cin.tie(NULL);
+        cout.tie(NULL);
+
+        int n;
+        cin>>n;
+        int arr[n+1];
+        for(int i=0;i<n;i++)
+        {
+            cin>>arr[i];                             time complexity: n^2
+        }
+         int ans=0;
+        for(int i=0;i<n;i++)
+        {
+            for(int j=0;j<n;j++)
+            {
+                ans^=(arr[i]+arr[j]);
+            }
+        }
+        cout<<ans<<endl;
+
+    }
+
+}
+
+Another Approach:
+
+#include<bits/stdc++.h>
+using namespace std;
+#define ll long long int
+#define ld long double
+#define endl '\n'
+
+
+int main()
+{
+    int t;
+    cin>>t;
+    while(t--)
+    {
+        ios_base::sync_with_stdio(false);
+        cin.tie(NULL);
+        cout.tie(NULL);
+
+        int n;
+        cin>>n;
+        int arr[n+1];
+        for(int i=0;i<n;i++)
+        {
+            cin>>arr[i];                             time complexity: n
+        }
+        int ans=0;
+        for(int i=0;i<n;i++)
+        {
+
+            ans^=2*arr[i];
+
+        }
+        cout<<ans<<endl;
+
+    }
+
+}
+
+------------------------------------------------------------------------------------------
+                      Total sum of all pair XOR
+** Given an array with n elements, calculating following
+(a1^a2)+(a1^a3)+.....+(a1^an)+
+         (a2^a3)+....+(a2^an)+
+         .........+(an-1 ^ an)
+
+
+#include<bits/stdc++.h>
+using namespace std;
+#define ll long long int
+#define ld long double
+#define endl '\n'
+
+
+int main()
+{
+    int t;
+    cin>>t;
+    while(t--)
+    {
+        ios_base::sync_with_stdio(false);
+        cin.tie(NULL);
+        cout.tie(NULL);
+
+        int n;
+        cin>>n;
+        int arr[n+1];
+        for(int i=0;i<n;i++)
+        {
+            cin>>arr[i];                          time complexity: n^2
+        }
+        int ans=0;
+        for(int i=0;i<n-1;i++)
+        {
+            for(int j=i+1;j<n;j++)
+            {
+                ans+=(arr[i]^arr[j]);
+            }
+        }
+        cout<<ans<<endl;
+
+    }
+
+}
+
+Another Approach:
+
+#include<bits/stdc++.h>
+using namespace std;
+#define ll long long int
+#define ld long double
+#define endl '\n'
+
+
+int main()
+{
+    int t;
+    cin>>t;
+    while(t--)
+    {
+        ios_base::sync_with_stdio(false);
+        cin.tie(NULL);
+        cout.tie(NULL);
+
+        int n;
+        cin>>n;
+        int arr[n+1];
+        for(int i=0;i<n;i++)
+        {
+            cin>>arr[i];
+        }
+        int ans=0;
+        for(int i=0;i<31;i++)
+        {
+            int cntZ=0,cntO=0;
+            for(int j=0;j<n;j++)
+            {
+                if(arr[j]&(1<<i))
+                {
+                    cntO++;
+                }
+                else
+                {
+                    cntZ++;
+                }
+            }
+            int p=cntO*cntZ;
+           // ans+=p*(1<<i);
+            ans+=pow(2,i)*p;
+        }
+        cout<<ans<<endl;
+
+    }
+
+}
+-------------------------------------------------------------------------------
+       Find the sum of bit differences in all the pairs
+#include<bits/stdc++.h>
+using namespace std;
+#define ll long long int
+#define ld long double
+#define endl '\n'
+ 
+const int N = 2e5+125;
+const int MOD = 10000007;
+int arr[N];
+ 
+int main()
+{
+    ios_base::sync_with_stdio(false);
+    cin.tie(NULL);
+    cout.tie(NULL);
+ 
+ 
+    int t,cas=0;
+    cin>>t;
+    while(t--)
+    {
+        ios_base::sync_with_stdio(false);
+        cin.tie(NULL);
+        cout.tie(NULL);
+ 
+        cas++;
+        int n;
+        cin>>n;
+        for(int i=0;i<n;i++)
+        {
+            cin>>arr[i];
+        }
+        ll res=0,ans=0,res1=0;
+        for(int i=0;i<=31;i++)
+        {
+            ll cnt1=0,cnt0=0;
+            for(int j=0;j<n;j++)
+            {
+                if(arr[j]&(1<<i))
+                {
+                    cnt1++;
+                }
+                else
+                {
+                    cnt0++;
+                }
+            }
+            res=cnt1*cnt0;
+            ans+=(res%MOD);
+ 
+        }
+         res1=(ans*2)%MOD;
+ 
+        cout<<"Case "<<cas<<": "<<res1<<endl;
+ 
+    }
+ 
+    return 0;
+}
+ 
+
+//https://www.spoj.com/problems/BITDIFF/
+
+Reference:
+Sum of Bitwise And of all pairs in a given array
+
+----------------------------------------------------------------------------
+** Given N Print the XOR of all the numbers between 1 to N ??
+Input: 5
+Output: 1
+
+#include <bits/stdc++.h>
+using namespace std;
+typedef long long ll;
+
+int main()
+{
+
+     int n;
+     cin>>n;
+     if(n%4==0)
+     {
+         cout<<n<<endl;
+     }
+     else if(n%4==1)
+     {
+         cout<<1<<endl;
+     }
+     else if(n%4==2)
+     {
+         cout<<n+1<<endl;
+     }
+     else if(n%4==3)
+     {
+         cout<<0<<endl;
+     }
+
+    return 0;
+}
+--------------------------------------------------------------------------------
+** Given a range (L-R) print the XOR 
+(L^L+1^L+2^.......^R-1^R)
+
+Input: L=2 R=4
+Output: 5
+
+#include <bits/stdc++.h>
+using namespace std;
+typedef long long ll;
+
+
+int ans(int n)
+{
+     if(n%4==0)
+     {
+         return n;
+     }
+     else if(n%4==1)
+     {
+        return 1;
+     }
+     else if(n%4==2)
+     {
+        return n+1;
+     }
+     else if(n%4==3)
+     {
+         return 0;
+     }
+}
+
+int main()
+{
+
+    int l,r;
+    cin>>l>>r;
+    int a=ans(r);
+    int b=ans(l-1);
+
+    int res=a^b;
+    cout<<res<<endl;
+
+    return 0;
+}
+--------------------------------------------------------------------------------
+
+
+
+
