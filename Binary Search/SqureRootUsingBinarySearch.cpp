@@ -19,7 +19,7 @@ int main()
     while(hi-lo>eps)
     {
         mid=(lo+hi)/2;
-        if(mid*mid<x)
+        if(mid*mid<=x)
         {
             lo=mid;
         }
