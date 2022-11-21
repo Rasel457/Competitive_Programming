@@ -13,4 +13,6 @@
 13. https://codeforces.com/contest/474/problem/B
 14. https://leetcode.com/problems/binary-search/
 15. https://www.spoj.com/problems/SABBIRGAME/
+16. https://codeforces.com/problemset/problem/279/B
+17. https://codeforces.com/contest/1676/problem/E
 
