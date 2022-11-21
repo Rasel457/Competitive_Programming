@@ -3,3 +3,4 @@
 3. https://vjudge.net/contest/512497#problem/H
 4. https://cses.fi/problemset/result/4570343/
 5. https://cses.fi/problemset/result/4570325/
+6. https://acm.timus.ru/problem.aspx?space=1&num=1521
