@@ -144,3 +144,4 @@ int main()
 
 
 }
+// https://lightoj.com/problem/ghajini
