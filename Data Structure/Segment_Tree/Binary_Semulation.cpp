@@ -200,3 +200,5 @@ int main()
 
 }
 
+//https://lightoj.com/problem/binary-simulation
+
