@@ -149,3 +149,4 @@ int main()
 
 }
 //https://vjudge.net/contest/530771#problem/F
+//https://cses.fi/problemset/task/1143/

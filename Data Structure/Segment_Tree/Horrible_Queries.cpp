@@ -177,3 +177,4 @@ int main()
 
 }
 
+//https://lightoj.com/problem/horrible-queries
