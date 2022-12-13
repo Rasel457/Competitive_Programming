@@ -1,0 +1,126 @@
+** Given two string find if second string occurs in first string as a subsequence
+
+#include<bits/stdc++.h>
+using namespace std;
+#define ll long long int
+#define ld long double
+
+const int N = 2e5+10;
+const int M = 1e9+7;
+
+
+bool SubsequenceCheck(string s1,string s2, int l1,int l2)
+{
+    if(l1==0)
+    {
+        return true;
+    }
+
+    if(l2==0)
+    {
+        return false;
+    }
+
+    if(s1[l1-1]==s2[l2-1])
+    {
+        return SubsequenceCheck(s1,s2, l1-1,l2-1);
+    }
+    else
+    {
+        return SubsequenceCheck(s1,s2, l1,l2-1);
+    }
+
+
+}
+
+
+
+int main()
+{
+    ios_base::sync_with_stdio(false);
+    cin.tie(NULL);
+    cout.tie(NULL);
+
+
+    string s1,s2;
+    cin>>s1;
+    cin>>s2;
+
+    int l1=s1.size();
+    int l2=s2.size();
+    bool ans=SubsequenceCheck(s1,s2, l1,l2);
+
+    if(ans==1)
+    {
+        cout<<"YES"<<endl;
+
+    }
+    else
+    {
+        cout<<"NO"<<endl;
+    }
+    return 0;
+
+
+}
+----------------------------------------------------------------------------------
+
+** Given two string find if second string occurs in first string as a substring.
+
+#include<bits/stdc++.h>
+using namespace std;
+#define LL long long int
+#define ld long double
+#define endl '\n'
+
+const int N = 5e5+5;
+const int MOD = 1e9+7;
+const int maxn = 505;
+
+string s1,s2;
+
+bool Substring(int pos,string str)
+{
+    if(s2==str)
+    {
+        return true;
+    }
+
+    if(pos==s1.size())
+    {
+        return false;
+    }
+    if(Substring(pos+1,str+s1[pos])==true)
+    {
+        return true;
+    }
+    if(Substring(pos+1,"")==true)
+    {
+        return true;
+    }
+    return false;
+}
+
+
+
+
+int main()
+{
+    ios_base::sync_with_stdio(false);
+    cin.tie(NULL);
+    cout.tie(NULL);
+
+    cin>>s1>>s2;
+    bool flag=Substring(0,"");
+    if(flag==true)
+    {
+        cout<<"YES"<<endl;
+    }
+    else
+    {
+        cout<<"NO"<<endl;
+    }
+    return 0;
+
+
+}
