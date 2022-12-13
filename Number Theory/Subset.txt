@@ -1,3 +1,4 @@
+
 ##                     Subset Genarate
 #include<bits/stdc++.h>
 using namespace std;
@@ -113,6 +114,7 @@ void GenetareSubset(int pos)
             {
                 cout<<i<<" ";
             }
+	    cout<<endl;
         }
        
         return;
@@ -140,6 +142,64 @@ int main()
 
 
 }
+---------------------------------------------------------------------------------
+                      How many subset where subset sum=M
+#include<bits/stdc++.h>
+using namespace std;
+#define ll long long int
+#define ld long double
+
+int arr[20];
+int n,m;
+vector<int>subset;
+
+
+int GenetareSubset(int pos)
+{
+    int sum=0;
+    if(pos==n)
+    {
+        for(int i:subset)
+        {
+            sum+=i;
+        }
+        if(sum==m)
+        {
+            return 1;
+        }
+        else
+        {
+            return 0;
+        }
+
+
+    }
+
+    //nibo Na
+    int x=GenetareSubset(pos+1);
+    //nibo
+    subset.push_back(arr[pos]);
+    int y=GenetareSubset(pos+1);
+    subset.pop_back();
+    return x+y;
+
+
+}
+
+int main()
+{
+    cin>>n>>m;
+    for(int i=0;i<n;i++)
+    {
+        cin>>arr[i];
+
+    }
+    int ans=GenetareSubset(0);
+    cout<<ans<<endl;
+
+
+}
+
 ---------------------------------------------------------------------------------
 ##                   Find all subset where s ubset sum is even/odd
 
