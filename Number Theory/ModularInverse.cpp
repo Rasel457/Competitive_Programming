@@ -18,7 +18,7 @@ long long powerMod(long long number, long long power, long long mod)
     else
     {
         ret = powerMod(number, power / 2, mod);
-        ret = (ret % mod * ret % mod * number % mod) % mod;
+        ret = (((ret % mod) * (ret % mod))%mod * (number % mod)) % mod;
         return ret % mod;
     }
 }
