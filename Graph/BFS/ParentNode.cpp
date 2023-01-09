@@ -75,3 +75,16 @@ int main()
 
     return 0;
 }
+
+/*
+Multiple component
+9 8
+6 4
+4 3
+4 5
+3 2
+5 2
+5 1
+2 1
+8 9
+*/
