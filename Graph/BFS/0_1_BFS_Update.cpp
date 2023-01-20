@@ -17,7 +17,7 @@ int ky[]={2, -2, 1, -1, 2, -2, 1, -1};
 vector<int>adj[300];
 vector<int>weight[300];
 //int visited[300];
-int dist[300];
+
 
 vector<int>dist(300,INT_MAX);
 
