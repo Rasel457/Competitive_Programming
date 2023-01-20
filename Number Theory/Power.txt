@@ -1,4 +1,4 @@
-LL power(LL num,LL p)
+ll power(ll num,ll p)
 {
     LL ret=0;
     if(p==0)
