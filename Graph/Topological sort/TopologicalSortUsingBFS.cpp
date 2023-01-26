@@ -24,7 +24,7 @@ bool flag=false;
 void topological_sort()
 {
     queue<int>Q;
-    for(int i=1;i<=nodes;i++)
+    for(int i=0;i<nodes;i++)
     {
         if(indegree[i]==0)
         {
@@ -79,7 +79,7 @@ int main()
         cout<<i<<" "<<indegree[i]<<endl;
     }*/
     topological_sort();
-    for(int i=1;i<=nodes;i++)
+    for(int i=0;i<nodes;i++)
     {
         if(indegree[i]!=0)
         {
