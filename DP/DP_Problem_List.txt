@@ -1,3 +1,6 @@
 1.Education DP Contest
 2.https://www.spoj.com/problems/KNAPSACK/
 3.https://toph.co/arena?practice=63c45e8e5753e243162ac7d1#!/p/5f3ff5e8c669930001b0f930
+4.https://vjudge.net/problem/UVA-1213
+5.https://vjudge.net/problem/LightOJ-1125
+6.https://vjudge.net/problem/UVA-10616
