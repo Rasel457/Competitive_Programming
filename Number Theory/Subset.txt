@@ -68,6 +68,7 @@ void GenetareSubset(int pos)
     subset.push_back(arr[pos]);
     GenetareSubset(pos+1);
     subset.pop_back();
+    
 
 
 }
