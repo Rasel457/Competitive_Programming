@@ -4,3 +4,12 @@
 4.https://vjudge.net/problem/UVA-1213
 5.https://vjudge.net/problem/LightOJ-1125
 6.https://vjudge.net/problem/UVA-10616
+7.https://www.codingninjas.com/codestudio/problems/maximum-sum-of-non-adjacent-elements_843261?leftPanelTab=0
+8.https://www.codingninjas.com/codestudio/problems/house-robber_839733?leftPanelTab=0
+9.https://www.codingninjas.com/codestudio/problems/ninja-s-training_3621003?leftPanelTab=0
+10.https://www.codingninjas.com/codestudio/problems/total-unique-paths_1081470?leftPanelTab=0
+11.https://www.codingninjas.com/codestudio/problems/maze-obstacles_977241?leftPanelTab=0
+12.https://www.codingninjas.com/codestudio/problems/count-ways-to-reach-nth-stairs_798650?leftPanelTab=0
+13.https://www.codingninjas.com/codestudio/problems/minimum-path-sum_985349?leftPanelTab=0
+14.https://www.codingninjas.com/codestudio/problems/triangle_1229398?leftPanelTab=0
+15.https://www.codingninjas.com/codestudio/problems/maximum-path-sum-in-the-matrix_797998?leftPanelTab=0
