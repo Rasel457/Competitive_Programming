@@ -201,7 +201,7 @@ int main()
 }
 
 ---------------------------------------------------------------------------------
-##                   Find all subset where s ubset sum is even/odd
+##                   Find all subset where subset sum is even/odd
 
 #include<bits/stdc++.h>
 using namespace std;
