@@ -13,3 +13,8 @@
 13.https://www.codingninjas.com/codestudio/problems/minimum-path-sum_985349?leftPanelTab=0
 14.https://www.codingninjas.com/codestudio/problems/triangle_1229398?leftPanelTab=0
 15.https://www.codingninjas.com/codestudio/problems/maximum-path-sum-in-the-matrix_797998?leftPanelTab=0
+16.https://www.spoj.com/problems/ACODE/
+17.https://www.codingninjas.com/codestudio/problems/ninja-and-his-friends_3125885?leftPanelTab=0 (***)
+18.https://www.codingninjas.com/codestudio/problems/subset-sum-equal-to-k_1550954?leftPanelTab=0
+19.https://www.codingninjas.com/codestudio/problems/partition-equal-subset-sum_892980?leftPanelTab=0
+20 https://www.codingninjas.com/codestudio/problems/partition-a-set-into-two-subsets-such-that-the-difference-of-subset-sums-is-minimum_842494?leftPanelTab=0 (***)
