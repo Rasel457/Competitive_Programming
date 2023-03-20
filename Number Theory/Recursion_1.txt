@@ -156,6 +156,7 @@ void print(int pos)
     ds.push_back(arr[pos]);
     sum+=arr[pos];
     print(pos+1);
+
     ds.pop_back();
     sum-=arr[pos];
     //nibo Na
