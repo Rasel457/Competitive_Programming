@@ -17,4 +17,17 @@
 17.https://www.codingninjas.com/codestudio/problems/ninja-and-his-friends_3125885?leftPanelTab=0 (***)
 18.https://www.codingninjas.com/codestudio/problems/subset-sum-equal-to-k_1550954?leftPanelTab=0
 19.https://www.codingninjas.com/codestudio/problems/partition-equal-subset-sum_892980?leftPanelTab=0
-20 https://www.codingninjas.com/codestudio/problems/partition-a-set-into-two-subsets-such-that-the-difference-of-subset-sums-is-minimum_842494?leftPanelTab=0 (***)
+20.https://www.codingninjas.com/codestudio/problems/partition-a-set-into-two-subsets-such-that-the-difference-of-subset-sums-is-minimum_842494?leftPanelTab=0 (***)
+21.https://www.codingninjas.com/codestudio/problems/number-of-subsets_3952532?leftPanelTab=0
+22.https://www.codingninjas.com/codestudio/problems/partitions-with-given-difference_3751628?leftPanelTab=0
+23.https://www.codingninjas.com/codestudio/problems/0-1-knapsack_920542?leftPanelTab=0
+24.https://www.codingninjas.com/codestudio/problems/target-sum_4127362?leftPanelTab=0
+
+** coin change
+25.https://vjudge.net/problem/UVA-357
+26.https://vjudge.net/problem/UVA-11137
+27.https://www.codingninjas.com/codestudio/problems/minimum-elements_3843091?leftPanelTab=1
+28.https://leetcode.com/problems/coin-change-ii/
+29.https://lightoj.com/problem/coin-change-i
+30.https://www.codingninjas.com/codestudio/problems/ways-to-make-coin-change_630471?leftPanelTab=0
+
