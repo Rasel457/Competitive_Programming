@@ -44,7 +44,7 @@ void dfs(int u)
 {
     visited[u]=1;
     start_time[u]=_time;
-    _time++;
+    _time++; 
     for(int i=0;i<adj[u].size();i++)
     {
         int v=adj[u][i];
