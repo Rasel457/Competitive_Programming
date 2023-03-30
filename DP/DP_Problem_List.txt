@@ -48,4 +48,12 @@
 39.https://www.codingninjas.com/codestudio/problems/minimum-insertions-to-make-palindrome_985293?leftPanelTab=0
 40.https://www.codingninjas.com/codestudio/problems/can-you-make_4244510?leftPanelTab=0
 41.https://leetcode.com/problems/delete-operation-for-two-strings/description/
+42.https://www.codingninjas.com/codestudio/problems/edit-distance_630420?leftPanelTab=0
+43.https://leetcode.com/problems/edit-distance/description/
+44.https://leetcode.com/problems/distinct-subsequences/
+
+**Longest Increasing Subsequence
+45.https://leetcode.com/problems/longest-increasing-subsequence/description/
+46.https://www.codingninjas.com/codestudio/problems/longest-increasing-subsequence_1062665?leftPanelTab=0
+47.https://www.codingninjas.com/codestudio/problems/longest-increasing-subsequence_630459?leftPanelTab=0
 
