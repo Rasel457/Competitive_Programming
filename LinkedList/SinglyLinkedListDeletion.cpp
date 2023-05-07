@@ -74,7 +74,7 @@ Node *DeleteAtIndex(Node *head,int index)
     Node *p=head;
     Node *q=head->next;
 
-    for(int i=0;i<index-1;i++)
+    for(int i=0;i<index-1;i++) //i=0 means 0 based Index
     {
         p=p->next;
         q=q->next;
@@ -84,9 +84,9 @@ Node *DeleteAtIndex(Node *head,int index)
     q=NULL;
     return head;
 
-    /*
-    Node *p=head;
-    int i=0;
+
+    /*Node *p=head;
+    int i=0;// i=0 means 0 based index
     while(i!=index-1)
     {
         p=p->next;
@@ -197,6 +197,7 @@ int main()
     cout<<"After deleting the given value"<<endl;
     head=DeleteGivenValue(head,8);
     LinkedListTraversal(head);
+
     /*cout<<"After deleting entire linked list"<<endl;
     head=DeleteEntireList(head);
     if(head==NULL)
