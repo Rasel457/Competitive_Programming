@@ -71,34 +71,61 @@ Node *DeleteFirst(Node *head)
 
 Node *DeleteAtIndex(Node *head,int index)
 {
-    Node *p=head;
-    Node *q=head->next;
-
-    for(int i=0;i<index-1;i++) //i=0 means 0 based Index
-    {
-        p=p->next;
-        q=q->next;
-    }
-    p->next=q->next;
-    free(q);
-    q=NULL;
-    return head;
-
-
     /*Node *p=head;
-    int i=0;// i=0 means 0 based index
-    while(i!=index-1)
+    Node *q=head->next;
+    if(head==NULL)
     {
-        p=p->next;
-        i++;
+        cout<<"List is already empty"<<endl;
     }
+    else if (index==1)
+    {
+        head=head->next;
+        free(p);
+        p=NULL;
+        return head;
+    }
+    else
+    {
+        for(int i=1;i<index-1;i++) //i=1 means 1 based Index
+        {
+            p=p->next;
+            q=q->next;
+        }
+        p->next=q->next;
+        free(q);
+        q=NULL;
+        return head;
+    }*/
 
-    Node *q=p->next;
-    p->next=q->next;
-    free(q);
-    q=NULL;
-    return head;*/
 
+
+    Node *p=head;
+    if(head==NULL)
+    {
+        cout<<"List is already empty"<<endl;
+    }
+    else if (index==1)
+    {
+        head=head->next;
+        free(p);
+        p=NULL;
+        return head;
+    }
+    else
+    {
+        int i=1;// i=1 means 1 based index
+        while(i!=index-1)
+        {
+            p=p->next;
+            i++;
+        }
+
+        Node *q=p->next;
+        p->next=q->next;
+        free(q);
+        q=NULL;
+        return head;
+    }
 
 }
 
@@ -185,18 +212,17 @@ int main()
     /*cout<<"After deleting the first node "<<endl;
     head=DeleteFirst(head);
     LinkedListTraversal(head);*/
-
-    /*cout<<"After deleting at any index value"<<endl;
-    head=DeleteAtIndex(head,2);
-    LinkedListTraversal(head);*/
+    cout<<"After deleting at any index value"<<endl;
+    head=DeleteAtIndex(head,1);
+    LinkedListTraversal(head);
 
     /*cout<<"After deleting the last element"<<endl;
     head=DeleteAtEnd(head);
     LinkedListTraversal(head);*/
 
-    cout<<"After deleting the given value"<<endl;
+   /* cout<<"After deleting the given value"<<endl;
     head=DeleteGivenValue(head,8);
-    LinkedListTraversal(head);
+    LinkedListTraversal(head);*/
 
     /*cout<<"After deleting entire linked list"<<endl;
     head=DeleteEntireList(head);
