@@ -15,4 +15,5 @@
 15. https://www.spoj.com/problems/SABBIRGAME/
 16. https://codeforces.com/problemset/problem/279/B
 17. https://codeforces.com/contest/1676/problem/E
+18.https://codeforces.com/contest/1613/problem/C
 
