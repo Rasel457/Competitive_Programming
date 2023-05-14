@@ -128,20 +128,28 @@ Node *DeleteAtEnd(Node *head)
 
 Node *DeleteAtIndex(Node *head,int index)
 {
-
-    Node *p=head;
-    int i=0;
-    while(i!=index-1)
+    if(index==0)
     {
-        p=p->next;
-        i++;
+        head=DeleteFirst(head);
+    }
+    else
+    {
+        Node *p=head;
+        int i=0;// i=0 means 0 based index
+        while(i!=index-1)
+        {
+            p=p->next;
+            i++;
+        }
+
+        Node *q=p->next;
+        p->next=q->next;
+        q->next->prev=p;
+        free(q);
+        q=NULL;
+
     }
 
-    Node *q=p->next;
-    p->next=q->next;
-    q->next->prev=p;
-    free(q);
-    q=NULL;
     return head;
 
 
