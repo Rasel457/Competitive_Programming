@@ -93,6 +93,36 @@ Node *insertAtEnd(Node *head,int data)
 
 }
 
+Node *DetectCycle(Node *head)
+{
+    Node *slow=head;
+    Node *fast=head;
+
+    while(fast!=NULL && fast->next!=NULL)
+    {
+        slow=slow->next;
+        fast=fast->next->next;
+        if(slow==fast)
+        {
+            return slow;
+        }
+    }
+    return NULL;
+}
+
+Node *InterSectionNode(Node *head)
+{
+    Node *meet=DetectCycle(head);
+    Node *start=head;
+
+    while(start!=meet)
+    {
+        start=start->next;
+        meet=meet->next;
+    }
+    return start;
+}
+
 
 int main()
 {
@@ -121,13 +151,28 @@ int main()
     cout<<"Circular Linked list before insertion"<<endl;
     LinkedListTraversal(head);
 
-    head=insertAtFirst(head,57);
+    /*head=insertAtFirst(head,57);
     cout<<"Circular Linked list after insertion at first"<<endl;
     LinkedListTraversal(head);
 
     head=insertAtEnd(head,80);
     cout<<"Circular Linked list after insertion at last"<<endl;
-    LinkedListTraversal(head);
+    LinkedListTraversal(head);*/
+
+    Node *ans=DetectCycle(head);
+    if(ans!=NULL)
+    {
+        cout<<"Cycle Found"<<endl;
+    }
+    else
+    {
+         cout<<"Cycle Not Found"<<endl;
+    }
+
+    Node *res=InterSectionNode(head);
+    cout<<"First Node where Cycle Start: "<<res->data<<endl;
+
+
 
 
     return 0;
