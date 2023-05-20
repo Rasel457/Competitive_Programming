@@ -95,10 +95,11 @@ Node *Insert(Node *root, int key)
     Node *ptr=root;
     if(root==NULL)
     {
-         Node * newNode=(Node *)malloc(sizeof(Node));
-         newNode->data=key;
-         newNode->left=NULL;
-         newNode->right=NULL;
+         //Node * newNode=(Node *)malloc(sizeof(Node));
+         //newNode->data=key;
+         //newNode->left=NULL;
+         //newNode->right=NULL;
+         Node * newNode=new node(key);
          return newNode;
     }
     Node *prev=NULL;
@@ -121,21 +122,22 @@ Node *Insert(Node *root, int key)
         }
     }
 
-    Node * newNode=(Node *)malloc(sizeof(Node));
+    //Node * newNode=(Node *)malloc(sizeof(Node));
+    Node * newNode=new node(key);
     if(key<prev->data)
     {
-        newNode->data=key;
-        newNode->left=NULL;
-        newNode->right=NULL;
+        //newNode->data=key;
+       // newNode->left=NULL;
+       // newNode->right=NULL;
 
         prev->left=newNode;
 
     }
     else
     {
-         newNode->data=key;
-         newNode->left=NULL;
-         newNode->right=NULL;
+         //newNode->data=key;
+         //newNode->left=NULL;
+         //newNode->right=NULL;
 
         prev->right=newNode;
     }
