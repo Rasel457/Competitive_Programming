@@ -98,17 +98,29 @@ Node * InOrderPredecessor(Node *root)
     return root;
 }
 
+Node * InOrderSuccessor(Node *root)
+{
+   // cout<<"Here 3: "<<root->data<<endl;
+    root=root->right;
+    while(root->left!=NULL)
+    {
+        root=root->left;
+    }
+    return root;
+}
+
 Node *DeleteNode(Node *root,int value)
 {
     Node *Ipre;
     if(root==NULL)
     {
-       //cout<<"Here 3"<<endl;
+       //cout<<"Here 4"<<endl;
         return NULL;
     }
-    if(root->left==NULL && root->right==NULL)
+    //root->data==value condition for use when deleted elemrnt not in BST
+    if(root->left==NULL && root->right==NULL && root->data==value)
     {
-        //cout<<"Here 4"<<endl;
+        //cout<<"Here 5"<<endl;
         free(root);
         return NULL;
     }
@@ -123,11 +135,20 @@ Node *DeleteNode(Node *root,int value)
     else
     {
         //cout<<"Here 1: "<<root->data<<endl;
-        Ipre=InOrderPredecessor(root);
-        //cout<<Ipre->data<<endl;
-        root->data=Ipre->data;
-        root->left=DeleteNode(root->left,Ipre->data);
-        //cout<<"NOW "<<root->left<<endl;
+        Node *p=root->left;
+        if(p!=NULL)
+        {
+            Ipre=InOrderPredecessor(root);
+            root->data=Ipre->data;
+            root->left=DeleteNode(root->left,Ipre->data);
+        }
+        else
+        {
+            Ipre=InOrderSuccessor(root);
+            root->data=Ipre->data;
+            root->right=DeleteNode(root->right,Ipre->data);
+        }
+
     }
     return root;
 }
@@ -165,5 +186,7 @@ int main()
 9 4 2 -1 -1 7 5 -1 -1 8 -1 -1 11 -1 15 14 -1 -1 -1
 
 5 3 1 -1 -1 4 -1 -1 6 -1 -1
+
+1 -1 2 -1 -1
 */
 
