@@ -60,7 +60,7 @@ int main()
 
     for(int i=0;i<=node;i++)
     {
-        if(visited[i]==0 && !adj[i].empty())
+        if(visited[i]==0)
         {
             bfs(i);
         }
