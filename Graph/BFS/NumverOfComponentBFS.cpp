@@ -53,7 +53,7 @@ int main()
         adj[y].push_back(x);
     }
     int cnt=0;
-    for(int i=0;i<=node;i++)
+    for(int i=1;i<=node;i++)
     {
         if(visited[i]==0)
         {
