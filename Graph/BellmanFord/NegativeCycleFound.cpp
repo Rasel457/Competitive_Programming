@@ -7,7 +7,7 @@ using namespace std;
 const int N = 1e4+5;
 const int MOD = 1e9+7;
 const int maxn = 205;
-const int INF=1e8;
+const int INF=2000000000;
 
 int dx[]={-1, 1, 0, 0, -1, -1, 1, 1};
 int dy[]={0, 0, -1, 1, -1, 1, -1, 1};
