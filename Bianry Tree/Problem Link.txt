@@ -6,3 +6,5 @@
 6.https://leetcode.com/problems/binary-tree-inorder-traversal/
 7.https://leetcode.com/problems/binary-tree-level-order-traversal/
 8.https://leetcode.com/problems/same-tree/description/
+9.https://leetcode.com/problems/minimum-depth-of-binary-tree/description/
+10.https://leetcode.com/problems/path-sum/
