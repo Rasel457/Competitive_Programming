@@ -215,7 +215,7 @@ int main()
              cout<<"There are "<<x<<" ways to produce "<<target<<" cents change."<<endl;
         }
 
-    }
+    } 
 
     return 0;
 }
