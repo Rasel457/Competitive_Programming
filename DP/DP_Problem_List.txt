@@ -57,3 +57,14 @@
 46.https://www.codingninjas.com/codestudio/problems/longest-increasing-subsequence_1062665?leftPanelTab=0
 47.https://www.codingninjas.com/codestudio/problems/longest-increasing-subsequence_630459?leftPanelTab=0
 
+48.https://www.codingninjas.com/studio/problems/loot-houses_630510?leftPanelTab=0
+
+LeetCode:
+49.https://leetcode.com/problems/cherry-pickup-ii/description/
+50.https://leetcode.com/problems/partition-equal-subset-sum/description/
+51.https://leetcode.com/problems/target-sum/description/
+52.https://www.codingninjas.com/studio/problems/best-time-to-buy-and-sell-stock_893405?leftPanelTab=0
+53.https://leetcode.com/problems/best-time-to-buy-and-sell-stock/description/
+54.https://www.codingninjas.com/studio/problems/unbounded-knapsack_1215029?leftPanelTab=0
+
+
