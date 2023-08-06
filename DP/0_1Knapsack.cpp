@@ -79,7 +79,7 @@ int main()
     cin.tie(NULL);
     cout.tie(NULL);
  
-    n,W;
+ 
     cin>>n>>W;
  
     for(int i=1;i<=n;i++)
