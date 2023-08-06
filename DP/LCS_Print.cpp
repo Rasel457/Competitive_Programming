@@ -124,6 +124,15 @@ int main()
         mem(dp,-1);
         int x=solve(0,0,s1,s2);
         print(0,0,s1,s2);
+
+	for(int i=0;i<=n;i++)
+        {
+            for(int j=0;j<=m;j++)
+            {
+                cout<<dp[i][j]<<" ";
+            }
+            cout<<endl;
+        }
     }
 
     return 0;
