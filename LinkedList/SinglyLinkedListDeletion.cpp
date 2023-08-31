@@ -150,6 +150,14 @@ Node *DeleteGivenValue(Node *head,int value)
 {
     Node *p=head;
     Node *q=head->next;
+    if(head->data==value)
+    {
+        p=head->next;
+        free(head);
+        head=p;
+        return head;
+
+    }
 
     while(q->data!=value && q->next!=NULL)
     {
