@@ -1,14 +1,21 @@
 ll power(ll num,ll p)
 {
-    LL ret=0;
+    ll ret=0;
     if(p==0)
     {
-        return 1LL;
+        return 1ll;
     }
     if(p==1)
     {
         return num;
     }
+    // For negative Power
+    /*if(p<0)
+    {
+        p=abs(p);
+        num=1/num;
+    }*/
+    
     if(p%2==0)
     {
         ret=power(num,p/2);
